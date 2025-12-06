@@ -8,19 +8,17 @@
 <body>
     <h1>Nacionalidade</h1>
     Pais: <input type="text" id="pais">
-    <input type="button" value="Verificar" onclick="calcular()">
+    <input type="button" value="Verificar" onclick="enviar()">
     <div id="res"></div>
     <script>
-        function calcular() {
-        var p1 = window.document.getElementById('pais')
-        var res = window.document.getElementById('res')
-        var r = 'Brasil'
-        if (p1 == r) {
-            res.innerHTML += '<p> Você é Brasileiro! </p>'
-        } else {      
-            res.innerHTML += '<p> Você é Gringo! </p>'
+        function enviar() {
+        var p1 = window.document.getElementById('pais').value
+        var p2 = "Brasil"
+        if( p1 === p2) {
+            res.innerHTML += '<p>Você é Brasileiro</p>'
+        } else {
+            res.innerHTML = '<p>Você é Gringo!</p>'
         }
-
         }
 
     </script>
